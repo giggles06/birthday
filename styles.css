@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #4b006e, #7a00b4, #ff4da6);
+  color: white;
+}
+
+/* Lock screen container */
+.lock-screen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .lock-screen {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left side text/password */
+.lock-left {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right side image */
+.lock-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lock-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  max-height: 90%;
+}
+
+/* Unlock screen container */
+.unlock-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  text-align: center !important; /* Centers text for the top section */
+  gap: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+}
+.unlock-top {
+  text-align: center; /* First two lines centered */
+}
+
+/* Section for personal msg + love note */
+.unlock-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px; /* Prevents super wide spacing */
+  /* Keep each column's text aligned inside */
+  gap: 2rem;
+}
+.unlock-col-left {
+  text-align: left;
+  transform: translateX(-20px);
+}
+
+.unlock-col-right {
+  text-align: right;
+  transform: translateX(20px);
+}
+.unlock-bottom {
+  text-align: center; /* Remaining text centered */
+  width: 100%;
+}
+/*.unlock-col {
+  flex: 1;
+}
+/* Buttons & inputs */
+input,
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: linear-gradient(to right, #ff4da6, #a64dff);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
